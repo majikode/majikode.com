@@ -1,3 +1,7 @@
+### Astro ###
+# Build output
+dist
+
 ### Node ###
 # Logs
 logs
