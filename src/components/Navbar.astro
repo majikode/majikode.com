@@ -115,3 +115,25 @@ import MajikodeLogo from "../assets/images/logo.png";
         </div>
     </nav>
 </div>
+
+<script>
+    const navbarBurger = document.querySelector(".navbar-burger");
+    const navbarMenu = document.querySelector(".navbar-menu");
+    const navbarBackdrop = document.querySelector(".navbar-backdrop");
+    const navbarClose = document.querySelector(".navbar-close");
+
+    navbarBurger!.addEventListener("click", () => {
+        navbarMenu!.classList.add("block");
+        navbarMenu!.classList.remove("hidden");
+    });
+
+    navbarBackdrop!.addEventListener("click", () => {
+        navbarMenu!.classList.add("hidden");
+        navbarMenu!.classList.remove("block");
+    });
+
+    navbarClose!.addEventListener("click", () => {
+        navbarMenu!.classList.add("hidden");
+        navbarMenu!.classList.remove("block");
+    });
+</script>

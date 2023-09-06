@@ -5,21 +5,17 @@ import ClutchCoIcon from "../assets/images/social/clutchco.png";
 import LinkedInIcon from "../assets/images/social/linkedin.png";
 ---
 
-<div class="flex flex-wrap items-center relative py-4">
-    <div class="w-full xl:w-4/12">
+<footer class="flex flex-wrap items-center justify-center relative py-4">
+    <div class="hidden md:block w-4/12 mx-auto">
         <a class="inline-block" href="#">
             <Image height={24} src={MajikodeLogo} alt="" />
         </a>
     </div>
-    <div
-        class="hidden md:block md:w-1/2 xl:w-4/12 px-4 xl:text-center mb-8 md:mb-0"
-    >
+    <div class="md:w-1/2 xl:w-4/12 px-4 xl:text-center">
         <span class="text-sm text-coolGray-500">© 2023 Majikode</span>
     </div>
-    <div class="w-full md:w-1/2 xl:w-4/12 px-4">
-        <div
-            class="flex flex-col xs:flex-row -mb-3 xs:items-center md:justify-end"
-        >
+    <div class="xl:w-4/12 px-4">
+        <div class="flex xs:flex-row -mb-3 xs:items-center md:justify-end">
             <a
                 class="inline-flex mb-3 mr-8 items-center text-black"
                 target="_blank"
@@ -40,4 +36,4 @@ import LinkedInIcon from "../assets/images/social/linkedin.png";
             </a>
         </div>
     </div>
-</div>
+</footer>

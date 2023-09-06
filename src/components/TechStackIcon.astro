@@ -8,7 +8,7 @@ interface Props {
 const { name, icon } = Astro.props;
 ---
 
-<div class="py-4 px-10 w-56">
+<div class="py-4 px-10 w-44 md:w-56">
     <Image class="mx-auto" src={icon} alt="" width={64} height={64} />
     <p class="text-lg text-center pt-4">{name}</p>
 </div>
