@@ -1,5 +1,5 @@
 ---
-import ContactForm from "../components/ContactForm.svelte";
+import Calendar from "../components/Calendar.astro";
 import Layout from "../layouts/Layout.astro";
 
 import { Image } from "astro:assets";
@@ -39,8 +39,10 @@ import LinkedInIcon from "../assets/images/social/linkedin.png";
 										class="block mb-2 text-sm text-coolGray-500"
 										>Call us</span
 									>
-									<span class="font-medium"
-										>+48 732 008 331</span
+									<a
+										class="font-medium"
+										href="tel:+48732008331"
+										>+48 732 008 331</a
 									>
 								</div>
 							</div>
@@ -52,8 +54,10 @@ import LinkedInIcon from "../assets/images/social/linkedin.png";
 										class="block mb-2 text-sm text-coolGray-500"
 										>Email us</span
 									>
-									<span class="font-medium"
-										>hello@majikode.com</span
+									<a
+										class="font-medium"
+										href="mailto:hello@majikode.com"
+										>hello@majikode.com</a
 									>
 								</div>
 							</div>
@@ -94,7 +98,7 @@ import LinkedInIcon from "../assets/images/social/linkedin.png";
 					</div>
 				</div>
 				<div class="w-full lg:w-1/2 px-4">
-					<ContactForm />
+					<Calendar />
 				</div>
 			</div>
 		</div>
