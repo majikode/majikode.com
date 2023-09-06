@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import MajikodeLogo from "../assets/images/logo.png";
 import ClutchCoIcon from "../assets/images/social/clutchco.png";
 import LinkedInIcon from "../assets/images/social/linkedin.png";
+
+const year = new Date().getFullYear();
 ---
 
 <footer class="flex flex-wrap items-center justify-center relative py-4">
@@ -12,7 +14,7 @@ import LinkedInIcon from "../assets/images/social/linkedin.png";
         </a>
     </div>
     <div class="md:w-1/2 xl:w-4/12 px-4 xl:text-center">
-        <span class="text-sm text-coolGray-500">© 2023 Majikode</span>
+        <span class="text-sm text-coolGray-500">© {year} Majikode</span>
     </div>
     <div class="xl:w-4/12 px-4">
         <div class="flex xs:flex-row -mb-3 xs:items-center md:justify-end">
