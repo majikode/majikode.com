@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import MajikodeLogo from "../assets/images/logo.png";
+import ClutchCoIcon from "../assets/images/social/clutchco.png";
+import LinkedInIcon from "../assets/images/social/linkedin.png";
+---
+
+<div class="flex flex-wrap items-center relative py-4">
+    <div class="w-full xl:w-4/12">
+        <a class="inline-block" href="#">
+            <Image height={24} src={MajikodeLogo} alt="" />
+        </a>
+    </div>
+    <div
+        class="hidden md:block md:w-1/2 xl:w-4/12 px-4 xl:text-center mb-8 md:mb-0"
+    >
+        <span class="text-sm text-coolGray-500">© 2023 Majikode</span>
+    </div>
+    <div class="w-full md:w-1/2 xl:w-4/12 px-4">
+        <div
+            class="flex flex-col xs:flex-row -mb-3 xs:items-center md:justify-end"
+        >
+            <a
+                class="inline-flex mb-3 mr-8 items-center text-black"
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://clutch.co/profile/majikode"
+            >
+                <Image width={14} src={ClutchCoIcon} alt="" />
+                <span class="ml-3 text-sm">Clutch</span>
+            </a>
+            <a
+                class="inline-flex mb-3 items-center text-black"
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://www.linkedin.com/company/majikode"
+            >
+                <Image width={14} src={LinkedInIcon} alt="" />
+                <span class="ml-3 text-sm">LinkedIn</span>
+            </a>
+        </div>
+    </div>
+</div>
