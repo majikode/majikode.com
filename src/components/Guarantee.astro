@@ -8,10 +8,7 @@ interface Props {
 const { index, title, description } = Astro.props;
 ---
 
-<a
-    class="relative group block xl:flex pb-8 mb-12 md:mb-24 items-end border-b border-black"
-    href="/services"
->
+<a class="relative group block xl:flex pb-8 mb-12 md:mb-24 items-end border-b border-black" href="/services">
     <div class="mb-0">
         <span class="block lg:-mb-1 text-sm text-coolGray-600">{index}</span>
         <h3
@@ -26,16 +23,8 @@ const { index, title, description } = Astro.props;
         </p>
     </div>
     <div class="text-right">
-        <span
-            class="inline-block group-hover:rotate-45 transform transition duration-100"
-        >
-            <svg
-                width="33"
-                height="33"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
+        <span class="inline-block group-hover:rotate-45 transform transition duration-100">
+            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M30 3L3 30"
                     stroke="black"
