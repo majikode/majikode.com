@@ -2,6 +2,7 @@
 import ServiceCard from "../components/ServiceCard.astro";
 import TechStackIcon from "../components/TechStackIcon.astro";
 import Layout from "../layouts/Layout.astro";
+import Highlight from "../components/Highlight.astro";
 
 import { Image } from "astro:assets";
 import RandomImage1 from "../assets/images/random-1.png";
@@ -14,7 +15,7 @@ import CSS3Icon from "../assets/images/techstack/css3.svg";
 import JSIcon from "../assets/images/techstack/javascript.svg";
 import ReactIcon from "../assets/images/techstack/react.svg";
 import ElasticsearchIcon from "../assets/images/techstack/elasticsearch.svg";
-import FigmaIcon from "../assets/images/techstack/figma.svg";
+import RedisIcon from "../assets/images/techstack/redis.svg";
 import DockerIcon from "../assets/images/techstack/docker.svg";
 import KubernetesIcon from "../assets/images/techstack/kubernetes.svg";
 import AWSIcon from "../assets/images/techstack/amazonaws.svg";
@@ -34,13 +35,15 @@ import GoIcon from "../assets/images/techstack/go.svg";
                     alt=""
                     loading="eager"
                 />
-                <h1 class="font-heading mx-auto text-center md:w-3/5 text-6xl">
+                <h1 class="font-heading mx-auto text-center md:w-3/5 text-4xl">
                     Majikode is a full-stack development consultancy
                 </h1>
                 <p class="mx-auto pl-4 md:pl-0 md:w-1/2 pt-8">
-                    Our engineering team possesses a diverse skill set, including the development of scalable products,
-                    the optimization of complex codebases, architecture design of custom data pipelines, security
-                    assessments, and the development of DevOps infrastructure.
+                    Our engineering team possesses a diverse skill set, including the development of <Highlight
+                        >scalable products</Highlight
+                    >, the optimization of <Highlight>complex codebases</Highlight>, architecture design of <Highlight
+                        >custom data pipelines</Highlight
+                    >, and the administration of <Highlight>cloud infrastructure.</Highlight>
                 </p>
             </div>
         </div>
@@ -50,37 +53,32 @@ import GoIcon from "../assets/images/techstack/go.svg";
         <div class="relative">
             <div class="max-w-md mx-auto lg:max-w-none">
                 <div class="text-center mb-12">
-                    <h2 class="font-heading w-1/2 mx-auto text-4xl">We are experts in</h2>
+                    <h2 class="font-heading w-1/2 mx-auto text-3xl">We are experts in</h2>
                 </div>
                 <div class="flex flex-wrap -mx-3 pl-4 md:pl-0">
                     <ServiceCard title="Software Architecture">
-                        Majikode thrives on delivering scalable and resilient products. We use a mix of proven and
-                        cutting-edge technologies to deliver the best possible solution for your business.
+                        We provide <Highlight>full technical documentation</Highlight> describing <span class="italic"
+                            >how</span
+                        > to implement given requirements, so that your developers can do the work in a <Highlight
+                            >shorter amount of time</Highlight
+                        > to a <Highlight>higher quality standard</Highlight>.
                     </ServiceCard>
-                    <ServiceCard title="Full-stack Web Development">
+                    <ServiceCard title="Full-stack Development">
                         We are experts in rapid prototyping and pragmatic system design. Our products are built to be
-                        easily maintained without sacrificing performance.
+                        <Highlight>easily maintained without sacrificing performance</Highlight>.
                     </ServiceCard>
-                    <ServiceCard title="DevSecOps, Data Engineering">
-                        We go beyond the development of software. We cover the whole lifecycle of software, including
-                        operations, security, and data engineering.
+                    <ServiceCard title="Product Management">
+                        We can work as a self-directed unit to deliver a full product, or we can integrate into an
+                        existing team to assist with <Highlight>management, engineering, and operations.</Highlight>
                     </ServiceCard>
                 </div>
-                <Image
-                    class="hidden sm:block absolute top-1/2 right-0 mt-8 rounded-4xl opacity-20"
-                    src={RandomImage1}
-                    alt=""
-                    loading="eager"
-                />
             </div>
         </div>
     </section>
     <section class="pt-24 pb-12">
         <div>
             <div class="text-center mb-12">
-                <h2 class="font-heading md:w-1/2 mx-auto text-4xl">
-                    We have experience with a wide stack of technologies
-                </h2>
+                <h2 class="font-heading md:w-1/2 mx-auto text-3xl">These are our favorite tools</h2>
             </div>
             <div class="flex flex-wrap justify-center">
                 <TechStackIcon name="Python" icon={PythonIcon} />
@@ -92,7 +90,7 @@ import GoIcon from "../assets/images/techstack/go.svg";
                 <TechStackIcon name="CSS3" icon={CSS3Icon} />
                 <TechStackIcon name="JavaScript" icon={JSIcon} />
                 <TechStackIcon name="React" icon={ReactIcon} />
-                <TechStackIcon name="Figma" icon={FigmaIcon} />
+                <TechStackIcon name="Redis" icon={RedisIcon} />
                 <TechStackIcon name="Docker" icon={DockerIcon} />
                 <TechStackIcon name="Kubernetes" icon={KubernetesIcon} />
                 <TechStackIcon name="Elasticsearch" icon={ElasticsearchIcon} />
@@ -100,5 +98,11 @@ import GoIcon from "../assets/images/techstack/go.svg";
                 <TechStackIcon name="GCP" icon={GCPIcon} />
             </div>
         </div>
+        <Image
+            class="hidden sm:block absolute top-3/4 right-0 rounded-4xl opacity-10"
+            src={RandomImage1}
+            alt=""
+            loading="eager"
+        />
     </section>
 </Layout>

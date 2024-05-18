@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Highlight from "../components/Highlight.astro";
 
 import { Image } from "astro:assets";
 import RandomImage2 from "../assets/images/random-2.png";
@@ -18,33 +19,35 @@ import RandomImage2 from "../assets/images/random-2.png";
                 <div class="w-full px-4 mb-16 lg:mb-0">
                     <div class="max-w-xl mx-auto">
                         <div class="max-w-lg mb-10">
-                            <h1
-                                class="font-heading text-6xl xs:text-8xl sm:text-9xl xl:text-10xl tracking-tighter mb-8"
-                            >
-                                Let's talk
-                            </h1>
-                            <p class="text-xl">
-                                <span class="block">
-                                    We are always on the lookout for new projects and clients.</span
-                                ><span class="block mt-4"
-                                    >We provide a project timeline and estimated budget <span class="font-bold"
-                                        >before</span
-                                    >
+                            <h1 class="font-heading text-6xl sm:text-9xl tracking-tighter mb-8">Let's talk</h1>
+                            <p class="text-xl flex flex-col gap-4">
+                                <span> We are always on the lookout for new projects and clients.</span><span
+                                    >We provide a project timeline and estimated budget <Highlight>before</Highlight>
                                     billing for any work.</span
+                                ><span
+                                    >We also offer a <Highlight>free consultation session</Highlight>
+                                    for any project.</span
                                 >
+                                <span>
+                                    If you are satisfied with the result, we can discuss a longer term working
+                                    arrangement.</span
+                                ><span
+                                    >If you are not satisfied, you are completely free to walk away with zero
+                                    obligations.
+                                </span>
                             </p>
-                        </div>
-                        <div class="flex flex-wrap -mx-4 mb-20">
-                            <div class="w-full sm:w-1/2 px-4 mb-6 sm:mb-0">
-                                <div class="py-6 text-center border border-coolGray-300 rounded-3xl">
-                                    <span class="block mb-2 text-sm text-coolGray-500">Call us</span>
-                                    <a class="font-medium" href="tel:+48732008331">+48 732 008 331</a>
+                            <div class="flex flex-wrap mt-4 -mx-4 mb-20">
+                                <div class="w-full sm:w-1/2 px-4 mb-6 sm:mb-0">
+                                    <div class="py-6 text-center border border-coolGray-300 rounded-3xl">
+                                        <span class="block mb-2 text-sm text-coolGray-500">Call us</span>
+                                        <a class="font-medium" href="tel:+48732008331">+48 732 008 331</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full sm:w-1/2 px-4">
-                                <div class="py-6 text-center border border-coolGray-300 rounded-3xl">
-                                    <span class="block mb-2 text-sm text-coolGray-500">Email us</span>
-                                    <a class="font-medium" href="mailto:hello@majikode.com">hello@majikode.com</a>
+                                <div class="w-full sm:w-1/2 px-4">
+                                    <div class="py-6 text-center border border-coolGray-300 rounded-3xl">
+                                        <span class="block mb-2 text-sm text-coolGray-500">Email us</span>
+                                        <a class="font-medium" href="mailto:hello@majikode.com">hello@majikode.com</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
