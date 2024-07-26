@@ -26,7 +26,7 @@ export default function Home() {
     return (
         <main className="flex flex-col justify-center gap-8">
             <Section>
-                <Image src={MajikodeText} alt="Majikode" className="w-40" />
+                <Image src={MajikodeText} alt="Majikode" className="w-40" unoptimized={true} />
                 <h1 className="text-2xl font-bold text-center">We build enchanting digital products.</h1>
                 <MutedText className="text-center">
                     Majikode is a result-based product development consultancy specializing in meeting deadlines.
@@ -56,7 +56,7 @@ export default function Home() {
                         Performance optimizations
                     </ServiceCard>
                 </div>
-                <Image src={OurOtherServicesImage} alt="Our other services" />
+                <Image src={OurOtherServicesImage} alt="Our other services" unoptimized={true} />
                 <VelocityScroll>
                     <div className="inline-flex gap-2">
                         <span className="flex gap-1 items-center">
@@ -99,7 +99,7 @@ export default function Home() {
                 <div className="flex items-center">
                     <MutedText>We work on innovative and fruitful projects like:</MutedText>
                     <a href="https://workwave.pl" target="_blank" rel="noreferrer">
-                        <Image src={WorkWaveLogo} alt="WorkWave" className="w-32" />
+                        <Image src={WorkWaveLogo} alt="WorkWave" className="w-32" unoptimized={true} />
                     </a>
                 </div>
                 <a
@@ -112,8 +112,14 @@ export default function Home() {
                         src={WorkWaveDesktop}
                         alt="WorkWave desktop"
                         className="object-contain h-40 translate-x-4 -rotate-12"
+                        unoptimized={true}
                     />
-                    <Image src={WorkWaveMobile} alt="WorkWave mobile" className="object-contain h-40 rotate-6" />
+                    <Image
+                        src={WorkWaveMobile}
+                        alt="WorkWave mobile"
+                        className="object-contain h-40 rotate-6"
+                        unoptimized={true}
+                    />
                 </a>
             </Section>
             <Section>
