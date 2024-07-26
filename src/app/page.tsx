@@ -97,7 +97,7 @@ export default function Home() {
                     come.
                 </MutedText>
                 <div className="flex items-center">
-                    <MutedText className="mx-2">We work on innovative and fruitful projects like:</MutedText>
+                    <MutedText>We work on innovative and fruitful projects like:</MutedText>
                     <a href="https://workwave.pl" target="_blank" rel="noreferrer">
                         <Image src={WorkWaveLogo} alt="WorkWave" className="w-32" />
                     </a>
