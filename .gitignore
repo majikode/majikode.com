@@ -1,29 +1,28 @@
-### Astro ###
-# Build output
-dist
+### NextJS ###
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-### Node ###
-# Logs
-logs
-*.log
+# Testing
+/coverage
+
+# NextJS specific
+/.next/
+/out/
+
+# Production build
+/build
+
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
 .pnpm-debug.log*
 
-# Dependency directories
-node_modules/
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
 
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+### Misc ###
+.DS_Store

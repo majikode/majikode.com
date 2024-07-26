@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: #fff;
+    background: no-repeat center url("/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@keyframes slide-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@layer utilities {
+    .animate-slide {
+        animation: slide-infinite 10s linear infinite;
+    }
+}
+
+mark {
+    background-color: #fdb700;
+}
