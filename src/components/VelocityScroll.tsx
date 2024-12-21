@@ -85,7 +85,7 @@ export function VelocityScroll({ children, defaultVelocity = 5, className }: Vel
             <div className="w-full overflow-hidden whitespace-nowrap" ref={containerRef}>
                 <motion.div className={classNames("inline-block", className)} style={{ x }}>
                     {Array.from({ length: repetitions }).map((_, i) => (
-                        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>shadcn component</explanation>
+                        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>Static number of elements in array.</explanation>
                         <span key={i} ref={i === 0 ? textRef : null}>
                             {children}{" "}
                         </span>

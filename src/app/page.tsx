@@ -1,10 +1,12 @@
-import EndToEndProcessImage from "@/assets/end-to-end-process-color.svg";
+"use client";
+
+import MajikodeComic from "@/assets/majikode-comic.webp";
 import MajikodeText from "@/assets/majikode-text.png";
-import OurOtherServicesImage from "@/assets/our-other-services-color.svg";
 import WorkWaveDesktop from "@/assets/workwave-desktop.png";
 import WorkWaveLogo from "@/assets/workwave-logo.png";
 import WorkWaveMobile from "@/assets/workwave-mobile.png";
 import CalPopupCalendar from "@/components/CalPopupCalendar";
+import Dialog from "@/components/Dialog";
 import DitheredButton from "@/components/DitheredButton";
 import DitheredLink from "@/components/DitheredLink";
 import MutedText from "@/components/MutedText";
@@ -12,16 +14,19 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import SparklesText from "@/components/SparklesText";
-import { VelocityScroll } from "@/components/VelocityScroll";
+import FinancialAppCaseStudy from "@/components/case-study-dialogs/FinancialAppCaseStudy";
+import TicketingCaseStudy from "@/components/case-study-dialogs/TicketingCaseStudy";
 import Image from "next/image";
+import React from "react";
 import { BiLogoDjango } from "react-icons/bi";
-import { FaLinkedin, FaRegEnvelope, FaServer } from "react-icons/fa";
-import { FaGolang, FaReact } from "react-icons/fa6";
+import { FaLinkedin, FaRegEnvelope } from "react-icons/fa";
+import { FaEraser } from "react-icons/fa6";
 import { HiLightningBolt } from "react-icons/hi";
 import { IoConstruct } from "react-icons/io5";
-import { MdArchitecture } from "react-icons/md";
 
 export default function Home() {
+    const dialogRef = React.useRef<HTMLDialogElement>(null);
+
     return (
         <main className="flex flex-col justify-center gap-8">
             <Section>
@@ -44,7 +49,7 @@ export default function Home() {
                 <div className="flex flex-col">
                     <ServiceCard>
                         <IoConstruct />
-                        Custom solutions
+                        Custom software solutions
                     </ServiceCard>
                     <ServiceCard>
                         <BiLogoDjango />
@@ -54,9 +59,13 @@ export default function Home() {
                         <HiLightningBolt />
                         Performance optimizations
                     </ServiceCard>
+                    <ServiceCard>
+                        <FaEraser />
+                        Tech debt reduction
+                    </ServiceCard>
                 </div>
-                <Image src={OurOtherServicesImage} alt="Our other services" unoptimized={true} />
-                <VelocityScroll>
+                {/* <Image src={OurOtherServicesImage} alt="Our other services" unoptimized={true} /> */}
+                {/* <VelocityScroll defaultVelocity={3}>
                     <div className="inline-flex gap-2">
                         <span className="flex gap-1 items-center">
                             <MdArchitecture />
@@ -75,14 +84,27 @@ export default function Home() {
                             Infrastructure Management
                         </span>
                     </div>
-                </VelocityScroll>
+                </VelocityScroll> */}
+                <div className="flex flex-col gap-1">
+                    <span className="text-center">Always on time.</span>
+                    <span className="text-center font-bold italic text-orange-400">Guaranteed.</span>
+                </div>
             </Section>
             <Section>
-                <SectionHeading>Our End-to-End Process</SectionHeading>
-                <Image
-                    src={EndToEndProcessImage}
-                    alt="Discovery, Design, Incremental delivery, Publishing, Support. All on schedule. Guaranteed."
-                />
+                <SectionHeading>Magically make your problems disappear</SectionHeading>
+                <MutedText className="text-center">Your project deserves better than 'almost done'.</MutedText>
+                <MutedText className="text-center">
+                    From rescuing abandoned codebases to crushing impossible deadlines, we're the team that steps in
+                    when the stakes are highest.
+                </MutedText>
+                <MutedText className="text-center">
+                    When others say it can't be done, we're just getting started.
+                </MutedText>
+                <Image src={MajikodeComic} alt="" />
+                <MutedText className="text-center">See our case studies:</MutedText>
+                <FinancialAppCaseStudy />
+                <TicketingCaseStudy />
+                <Dialog ref={dialogRef}>Some content</Dialog>
             </Section>
             <Section>
                 <SectionHeading>The Magic of Majikode</SectionHeading>
@@ -91,12 +113,13 @@ export default function Home() {
                     when you want it.
                 </MutedText>
                 <MutedText className="text-center">
-                    We add our <SparklesText text="magic touch" /> underneath the hood — where it will be invisible to
-                    you and your users. But it will make sure the software is reliable and maintainable for the years to
-                    come.
+                    We add our <SparklesText>magic touch</SparklesText> underneath the hood — where it will be invisible
+                    to you and your users. But it will make sure the software is reliable and maintainable for the years
+                    to come.
                 </MutedText>
+
                 <div className="flex items-center">
-                    <MutedText>We work on innovative and fruitful projects like:</MutedText>
+                    <MutedText>See our most recent project: </MutedText>
                     <a href="https://workwave.pl" target="_blank" rel="noreferrer">
                         <Image src={WorkWaveLogo} alt="WorkWave" className="w-32" unoptimized={true} />
                     </a>
@@ -122,9 +145,8 @@ export default function Home() {
                 </a>
             </Section>
             <Section>
-                <SectionHeading>Let&apos;s make something magical together</SectionHeading>
+                <SectionHeading>Let&apos;s make something magical together!</SectionHeading>
                 <MutedText className="flex flex-col text-left gap-4">
-                    <span>We are always on the lookout for new projects and clients.</span>
                     <span>
                         We provide a <mark>project timeline and estimated budget</mark> before billing for any work. We
                         also offer a <mark>free consultation session</mark> for any project. If you are not satisfied,

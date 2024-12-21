@@ -9,6 +9,10 @@ body {
     background-attachment: fixed;
 }
 
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
 @keyframes slide-infinite {
     0% {
         transform: translateX(0);

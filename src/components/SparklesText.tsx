@@ -16,12 +16,12 @@ interface Sparkle {
 }
 
 interface SparklesTextProps {
+    children: React.ReactNode;
     className?: string;
-    text: string;
     sparklesCount?: number;
 }
 
-const SparklesText: React.FC<SparklesTextProps> = ({ text, className, sparklesCount = 10, ...props }) => {
+const SparklesText: React.FC<SparklesTextProps> = ({ children, className, sparklesCount = 10, ...props }) => {
     const [sparkles, setSparkles] = useState<Sparkle[]>([]);
 
     useEffect(() => {
@@ -64,7 +64,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({ text, className, sparklesCo
             {sparkles.map((sparkle) => (
                 <Sparkle key={sparkle.id} {...sparkle} />
             ))}
-            {text}
+            {children}
         </span>
     );
 };
