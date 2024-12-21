@@ -9,7 +9,10 @@ export default function TicketingCaseStudy() {
     const dialogRef = React.useRef<HTMLDialogElement>(null);
 
     const openDialog = () => {
-        dialogRef.current?.showModal();
+        if (dialogRef.current) {
+            dialogRef.current.showModal();
+            dialogRef.current.scrollTop = 0;
+        }
     };
 
     return (
