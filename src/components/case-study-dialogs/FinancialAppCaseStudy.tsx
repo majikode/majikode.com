@@ -11,7 +11,22 @@ export default function FinancialAppCaseStudy() {
     const openDialog = () => {
         if (dialogRef.current) {
             dialogRef.current.showModal();
+
+            // Initial attempt
             dialogRef.current.scrollTop = 0;
+
+            // Safari fix using RAF
+            const scrollToTop = () => {
+                if (dialogRef.current) {
+                    dialogRef.current.scrollTop = 0;
+                }
+            };
+
+            requestAnimationFrame(() => {
+                scrollToTop();
+                // Double RAF for extra reliability
+                requestAnimationFrame(scrollToTop);
+            });
         }
     };
 
