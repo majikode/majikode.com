@@ -1,5 +1,5 @@
-import { AnchorHTMLAttributes, ReactNode } from "react";
 import classNames from "classnames";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 import ditherButtonStyles from "@/styles/dither-button.module.css";
 
@@ -11,7 +11,7 @@ export default function DitheredLink({
         <a
             className={classNames(
                 ditherButtonStyles.ditherButton,
-                "py-2 px-4 font-semibold rounded-lg shadow-md text-white focus:outline-none"
+                "py-2 px-4 font-semibold rounded-lg shadow-md text-white focus:outline-none",
             )}
             {...props}
         >

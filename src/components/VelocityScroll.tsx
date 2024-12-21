@@ -1,6 +1,5 @@
 "use client";
 
-import React, { ReactNode, useEffect, useRef, useState } from "react";
 import {
     motion,
     useAnimationFrame,
@@ -10,6 +9,7 @@ import {
     useTransform,
     useVelocity,
 } from "framer-motion";
+import React, { type ReactNode, useEffect, useRef, useState } from "react";
 
 import classNames from "classnames";
 
@@ -62,7 +62,7 @@ export function VelocityScroll({ children, defaultVelocity = 5, className }: Vel
 
             window.addEventListener("resize", calculateRepetitions);
             return () => window.removeEventListener("resize", calculateRepetitions);
-        }, [children]);
+        }, []);
 
         const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
@@ -85,6 +85,7 @@ export function VelocityScroll({ children, defaultVelocity = 5, className }: Vel
             <div className="w-full overflow-hidden whitespace-nowrap" ref={containerRef}>
                 <motion.div className={classNames("inline-block", className)} style={{ x }}>
                     {Array.from({ length: repetitions }).map((_, i) => (
+                        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>shadcn component</explanation>
                         <span key={i} ref={i === 0 ? textRef : null}>
                             {children}{" "}
                         </span>

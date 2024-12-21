@@ -1,25 +1,24 @@
-import Image from "next/image";
+import EndToEndProcessImage from "@/assets/end-to-end-process-color.svg";
 import MajikodeText from "@/assets/majikode-text.png";
-import WorkWaveLogo from "@/assets/workwave-logo.png";
-import WorkWaveDesktop from "@/assets/workwave-desktop.png";
-import WorkWaveMobile from "@/assets/workwave-mobile.png";
 import OurOtherServicesImage from "@/assets/our-other-services-color.svg";
-import { FaRegEnvelope } from "react-icons/fa";
-import { BiLogoDjango } from "react-icons/bi";
+import WorkWaveDesktop from "@/assets/workwave-desktop.png";
+import WorkWaveLogo from "@/assets/workwave-logo.png";
+import WorkWaveMobile from "@/assets/workwave-mobile.png";
 import CalPopupCalendar from "@/components/CalPopupCalendar";
 import DitheredButton from "@/components/DitheredButton";
-import SectionHeading from "@/components/SectionHeading";
 import DitheredLink from "@/components/DitheredLink";
-import ServiceCard from "@/components/ServiceCard";
-import { IoConstruct } from "react-icons/io5";
-import { HiLightningBolt } from "react-icons/hi";
-import { FaReact, FaGolang } from "react-icons/fa6";
-import { FaServer, FaLinkedin } from "react-icons/fa";
-import { VelocityScroll } from "@/components/VelocityScroll";
-import EndToEndProcessImage from "@/assets/end-to-end-process-color.svg";
 import MutedText from "@/components/MutedText";
-import SparklesText from "@/components/SparklesText";
 import Section from "@/components/Section";
+import SectionHeading from "@/components/SectionHeading";
+import ServiceCard from "@/components/ServiceCard";
+import SparklesText from "@/components/SparklesText";
+import { VelocityScroll } from "@/components/VelocityScroll";
+import Image from "next/image";
+import { BiLogoDjango } from "react-icons/bi";
+import { FaLinkedin, FaRegEnvelope, FaServer } from "react-icons/fa";
+import { FaGolang, FaReact } from "react-icons/fa6";
+import { HiLightningBolt } from "react-icons/hi";
+import { IoConstruct } from "react-icons/io5";
 import { MdArchitecture } from "react-icons/md";
 
 export default function Home() {
@@ -145,6 +144,7 @@ export default function Home() {
                         className="flex gap-2 items-center"
                     >
                         <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 118">
+                            <title>Clutch</title>
                             <path
                                 d="M48.581.995C8.531 8.224-11.678 51.212 7.633 88.097c14.014 26.767 49.508 37.352 77.824 23.208 5.397-2.696 17.477-11.332 17.518-12.524.014-.395-3.958-4.876-8.825-9.956l-8.85-9.237-4.321 3.698c-9.434 8.076-24.728 10.532-35.749 5.741-20.518-8.918-25.683-40.544-9.073-55.55 12.374-11.179 33.45-11.068 45.054.237l3.71 3.615 9.04-8.845c4.971-4.865 9.021-9.102 9-9.415-.061-.894-8.803-7.241-14.911-10.826C77.16 1.852 60.639-1.182 48.581.995m.803 40.862C42.255 45.191 39.5 49.97 39.5 59c0 6.902.285 8.029 2.892 11.447C53.233 84.661 76 76.906 76 59c0-13.711-14.284-22.911-26.616-17.143"
                                 fillRule="evenodd"

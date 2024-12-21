@@ -1,16 +1,16 @@
 "use client";
 
 import { getCalApi } from "@calcom/embed-react";
-import { ReactNode, useEffect } from "react";
+import { type ReactNode, useEffect } from "react";
 
 export default function CalPopupCalendar({ children }: Readonly<{ children: ReactNode }>) {
     useEffect(() => {
-        (async function () {
+        (async () => {
             const cal = await getCalApi({ namespace: "majikode-discovery" });
             cal("ui", {
                 styles: { branding: { brandColor: "#ecd300" } },
                 hideEventTypeDetails: false,
-                layout: "month_view"
+                layout: "month_view",
             });
         })();
     }, []);
