@@ -6,7 +6,6 @@ import WorkWaveDesktop from "@/assets/workwave-desktop.png";
 import WorkWaveLogo from "@/assets/workwave-logo.png";
 import WorkWaveMobile from "@/assets/workwave-mobile.png";
 import CalPopupCalendar from "@/components/CalPopupCalendar";
-import Dialog from "@/components/Dialog";
 import DitheredButton from "@/components/DitheredButton";
 import DitheredLink from "@/components/DitheredLink";
 import MutedText from "@/components/MutedText";
@@ -104,7 +103,6 @@ export default function Home() {
                 <MutedText className="text-center">See our case studies:</MutedText>
                 <FinancialAppCaseStudy />
                 <TicketingCaseStudy />
-                <Dialog ref={dialogRef}>Some content</Dialog>
             </Section>
             <Section>
                 <SectionHeading>The Magic of Majikode</SectionHeading>
