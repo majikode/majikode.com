@@ -22,7 +22,7 @@ export default function FinancialApp() {
                         within a month.
                     </p>
                     <p>The inherited codebase had significant challenges:</p>
-                    <ul className="list-disc self-center">
+                    <ul className="list-disc self-center mx-8 sm:mx-0">
                         <li>Invalid assumptions were made about events' data structures</li>
                         <li>Full table scans were required for each operation</li>
                         <li>Implementation was a loosely connected collection of Python scripts</li>
@@ -31,7 +31,7 @@ export default function FinancialApp() {
                         Given our timeline, we decided on dumping the code and building a new system. Our solution
                         included:
                     </p>
-                    <ul className="list-disc self-center">
+                    <ul className="list-disc self-center mx-8 sm:mx-0">
                         <li>Celery canvas-based infrastructure for incremental data ingestion</li>
                         <li>React frontend for invoice management and transaction verification</li>
                         <li>Django backend API for system operations</li>

@@ -22,7 +22,7 @@ export default function Ticketing() {
                         situation around, we accepted the challenge.
                     </p>
                     <p>However, the initial codebase assessment revealed technical debt far worse than anticipated:</p>
-                    <ul className="list-disc self-center">
+                    <ul className="list-disc self-center mx-8 sm:mx-0">
                         <li>Running on unsupported Django 2.1 with outdated dependencies</li>
                         <li>
                             Inconsistent, duplicated code implementations where similar features were coded differently
@@ -35,7 +35,7 @@ export default function Ticketing() {
                         </li>
                     </ul>
                     <p>Our six-month rescue effort focused on three key areas:</p>
-                    <ol className="list-decimal self-center">
+                    <ol className="list-decimal self-center mx-8 sm:mx-0">
                         <li>
                             <span className="font-bold">Modernization:</span> We upgraded all dependencies to supported
                             versions, replacing or removing unnecessary ones. Some dependencies were so superfluous that
