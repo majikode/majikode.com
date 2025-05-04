@@ -13,8 +13,6 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import SparklesText from "@/components/SparklesText";
-import FinancialAppCaseStudy from "@/components/case-study-dialogs/FinancialAppCaseStudy";
-import TicketingCaseStudy from "@/components/case-study-dialogs/TicketingCaseStudy";
 import Image from "next/image";
 import React from "react";
 import { BiLogoDjango } from "react-icons/bi";
@@ -24,8 +22,6 @@ import { HiLightningBolt } from "react-icons/hi";
 import { IoConstruct } from "react-icons/io5";
 
 export default function Home() {
-    const dialogRef = React.useRef<HTMLDialogElement>(null);
-
     return (
         <main className="flex flex-col justify-center gap-8">
             <Section>
@@ -101,8 +97,12 @@ export default function Home() {
                 </MutedText>
                 <Image src={MajikodeComic} alt="" />
                 <MutedText className="text-center">See our case studies:</MutedText>
-                <FinancialAppCaseStudy />
-                <TicketingCaseStudy />
+                <DitheredLink href="/case-study/financial-app" internal={true}>
+                    Transactional Billing System: Under 30-Day Financial App Development
+                </DitheredLink>
+                <DitheredLink href="/case-study/ticketing" internal={true}>
+                    Legacy Ticketing System Rescue: Clearing Backlog, Performance, and Security Issues
+                </DitheredLink>
             </Section>
             <Section>
                 <SectionHeading>The Magic of Majikode</SectionHeading>

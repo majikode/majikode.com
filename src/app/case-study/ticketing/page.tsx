@@ -1,41 +1,14 @@
-import Dialog from "@/components/Dialog";
-import DitheredButton from "@/components/DitheredButton";
 import Image from "next/image";
-import React from "react";
+
+import Section from "@/components/Section";
 
 import CaseStudyCover from "@/assets/case-study-ticketing.webp";
+import DitheredLink from "@/components/DitheredLink";
 
-export default function TicketingCaseStudy() {
-    const dialogRef = React.useRef<HTMLDialogElement>(null);
-
-    const openDialog = () => {
-        if (dialogRef.current) {
-            dialogRef.current.showModal();
-
-            // Initial attempt
-            dialogRef.current.scrollTop = 0;
-
-            // Safari fix using RAF
-            const scrollToTop = () => {
-                if (dialogRef.current) {
-                    dialogRef.current.scrollTop = 0;
-                }
-            };
-
-            requestAnimationFrame(() => {
-                scrollToTop();
-                // Double RAF for extra reliability
-                requestAnimationFrame(scrollToTop);
-            });
-        }
-    };
-
+export default function Ticketing() {
     return (
-        <>
-            <DitheredButton onClick={openDialog}>
-                Legacy Ticketing System Rescue: Clearing Backlog, Performance, and Security Issues
-            </DitheredButton>
-            <Dialog ref={dialogRef}>
+        <main className="flex flex-col justify-center">
+            <Section>
                 <Image src={CaseStudyCover} alt="" unoptimized={true} />
                 <div className="flex flex-col items-start gap-4">
                     <h1 className="font-bold text-xl">
@@ -84,7 +57,16 @@ export default function TicketingCaseStudy() {
                         maintainability.
                     </p>
                 </div>
-            </Dialog>
-        </>
+                <DitheredLink href="/" internal={true} className="px-1 py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <title>Go back</title>
+                        <path
+                            fill="currentColor"
+                            d="M6.325 12.85q-.225-.15-.337-.375T5.874 12t.113-.475t.337-.375l8.15-5.175q.125-.075.263-.112T15 5.825q.4 0 .7.288t.3.712v10.35q0 .425-.3.713t-.7.287q-.125 0-.262-.038t-.263-.112z"
+                        />
+                    </svg>
+                </DitheredLink>
+            </Section>
+        </main>
     );
 }
